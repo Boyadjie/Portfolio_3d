@@ -71,132 +71,139 @@ export default class Controls {
   }
 
   setScrollTrigger() {
-    ScrollTrigger.matchMedia({
-      // desktop
-      "(min-width: 969px)": () => {
-        // Reset
-        this.room.scale.set(0.5, 0.5, 0.5);
+    let mm = GSAP.matchMedia();
 
-        // First section
-        this.firstTimeline = new GSAP.timeline({
-          scrollTrigger: {
-            trigger: ".first",
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 0.6,
-            invalidateOnRefresh: true,
-          },
-        }).to(this.room.position, {
-          x: () => {
-            return this.sizes.width * 0.0018;
-          },
-        });
-
-        // Second section
-        this.secondTimeline = new GSAP.timeline({
-          scrollTrigger: {
-            trigger: ".second",
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 0.6,
-            invalidateOnRefresh: true,
-          },
-        })
-          .to(
-            this.room.position,
-            {
-              x: () => {
-                return -this.sizes.width * 0.0018;
-              },
-              z: () => {
-                return this.sizes.height * 0.0018;
-              },
-              y: 0.5,
-            },
-            "same"
-          )
-          .to(
-            this.room.scale,
-            {
-              x: 1,
-              y: 1,
-              z: 1,
-            },
-            "same"
-          )
-          .to(
-            this.circle.position,
-            {
-              y: 0.4,
-            },
-            "same"
-          );
-
-        // Third section
-        this.thirdTimeline = new GSAP.timeline({
-          scrollTrigger: {
-            trigger: ".third",
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 0.6,
-            invalidateOnRefresh: true,
-          },
-        }).to(this.camera.orthographicCamera.position, {
-          x: -6,
-          y: 1,
-        });
+    mm.add(
+      {
+        isDesktop: `(min-width: 969px)`,
+        isMobile: `(max-width: 968px)`,
       },
+      (context) => {
+        let { isDesktop, isMobile } = context.conditions;
 
-      // Mobile
-      "(max-width: 968px)": () => {
-        // Reset
-        this.room.scale.set(0.3, 0.3, 0.3);
+        if (isDesktop) {
+          // Reset
+          this.room.scale.set(0.5, 0.5, 0.5);
 
-        // First section
-        this.firstTimeline = new GSAP.timeline({
-          scrollTrigger: {
-            trigger: ".first",
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 0.6,
-            invalidateOnRefresh: true,
-          },
-        }).to(this.room.scale, {
-          x: 0.4,
-          y: 0.4,
-          z: 0.4,
-        });
+          // First section
+          this.firstTimeline = new GSAP.timeline({
+            scrollTrigger: {
+              trigger: ".first",
+              start: "top top",
+              end: "bottom bottom",
+              markers: true,
+              scrub: 0.6,
+              invalidateOnRefresh: true,
+            },
+          }).to(this.room.position, {
+            x: () => {
+              return this.sizes.width * 0.0018;
+            },
+          });
 
-        // Second section
-        this.secondTimeline = new GSAP.timeline({
-          scrollTrigger: {
-            trigger: ".second",
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 0.6,
-            invalidateOnRefresh: true,
-          },
-        }).to(this.room.scale, {
-          x: 1.2,
-          y: 1.2,
-          z: 1.2,
-        });
+          // Second section
+          this.secondTimeline = new GSAP.timeline({
+            scrollTrigger: {
+              trigger: ".second",
+              start: "top top",
+              end: "bottom bottom",
+              scrub: 0.6,
+              invalidateOnRefresh: true,
+            },
+          })
+            .to(
+              this.room.position,
+              {
+                x: () => {
+                  return -this.sizes.width * 0.0018;
+                },
+                z: () => {
+                  return this.sizes.height * 0.0018;
+                },
+                y: 0.5,
+              },
+              "same"
+            )
+            .to(
+              this.room.scale,
+              {
+                x: 1,
+                y: 1,
+                z: 1,
+              },
+              "same"
+            )
+            .to(
+              this.circle.position,
+              {
+                y: 0.4,
+              },
+              "same"
+            );
 
-        // Third section
-        this.firstTimeline = new GSAP.timeline({
-          scrollTrigger: {
-            trigger: ".third",
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 0.6,
-            invalidateOnRefresh: true,
-          },
-        }).to(this.camera.orthographicCamera.position, {
-          x: -1.5,
-          y: 1,
-        });
-      },
-      all: () => {
+          // Third section
+          this.thirdTimeline = new GSAP.timeline({
+            scrollTrigger: {
+              trigger: ".third",
+              start: "top top",
+              end: "bottom bottom",
+              scrub: 0.6,
+              invalidateOnRefresh: true,
+            },
+          }).to(this.camera.orthographicCamera.position, {
+            x: -6,
+            y: 1,
+          });
+        } else if (isMobile) {
+          // Reset
+          this.room.scale.set(0.3, 0.3, 0.3);
+
+          // First section
+          this.firstMobileTimeline = new GSAP.timeline({
+            scrollTrigger: {
+              trigger: ".first",
+              start: "top top",
+              end: "bottom bottom",
+              markers: true,
+              scrub: 0.6,
+              invalidateOnRefresh: true,
+            },
+          }).to(this.room.scale, {
+            x: 0.4,
+            y: 0.4,
+            z: 0.4,
+          });
+
+          // Second section
+          this.secondMobileTimeline = new GSAP.timeline({
+            scrollTrigger: {
+              trigger: ".second",
+              start: "top top",
+              end: "bottom bottom",
+              scrub: 0.6,
+              invalidateOnRefresh: true,
+            },
+          }).to(this.room.scale, {
+            x: 1.2,
+            y: 1.2,
+            z: 1.2,
+          });
+
+          // Third section
+          this.thirdMobileTimeline = new GSAP.timeline({
+            scrollTrigger: {
+              trigger: ".third",
+              start: "top top",
+              end: "bottom bottom",
+              scrub: 0.6,
+              invalidateOnRefresh: true,
+            },
+          }).to(this.camera.orthographicCamera.position, {
+            x: -1.5,
+            y: 1,
+          });
+        }
+
         // Progress bar
         this.sections = document.querySelectorAll(".section");
         this.sections.forEach((section) => {
@@ -363,8 +370,8 @@ export default class Controls {
         this.miniPlatformTimeline.add(this.sixth, "-=0.2");
         this.miniPlatformTimeline.add(this.seventh, "-=0.1");
         this.miniPlatformTimeline.add(this.heighth, "-=0.1");
-      },
-    });
+      }
+    );
   }
 
   resize() {}
