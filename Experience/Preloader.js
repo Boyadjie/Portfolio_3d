@@ -22,7 +22,14 @@ export default class Preloader extends EventEmitter {
 
     this.world.on("worldready", () => {
       this.setAssets();
-      this.playIntro();
+      if (sessionStorage.getItem("visited")) {
+        this.emit("enablecontrols");
+        document.querySelector(".preloader").classList.add("hidden");
+        // Function to display text
+        this.displayText();
+      } else {
+        this.playIntro();
+      }
     });
   }
 
@@ -34,6 +41,48 @@ export default class Preloader extends EventEmitter {
     convert(document.querySelector(".hero-subheading > p:last-child"));
     this.room = this.world.room.roomModel;
     this.roomChildren = this.world.room.roomChildren;
+  }
+
+  displayText() {
+    this.textTimeline = new GSAP.timeline();
+    this.textTimeline.set(".animatedis", { y: 0, yPercent: 100 });
+    this.textTimeline
+      .to(
+        ".hero-subheading p:first-child .animatedis",
+        {
+          yPercent: 0,
+          stagger: 0.07,
+          ease: "back.out(1.7)",
+        },
+        "introText"
+      )
+      .to(
+        ".hero-subheading p:last-child .animatedis",
+        {
+          yPercent: 0,
+          stagger: 0.07,
+          ease: "back.out(1.7)",
+        },
+        "introText"
+      )
+      .to(
+        ".hero-main h1 .animatedis",
+        {
+          yPercent: 0,
+          stagger: 0.07,
+          ease: "back.out(1.7)",
+        },
+        "introText"
+      )
+      .to(
+        ".hero-main p .animatedis",
+        {
+          yPercent: 0,
+          stagger: 0.07,
+          ease: "back.out(1.7)",
+        },
+        "introText"
+      );
   }
 
   firstIntro() {
@@ -341,7 +390,10 @@ export default class Preloader extends EventEmitter {
     this.scaleFlag = true;
     await this.secondIntro();
     this.scaleFlag = false;
-    this.emit("enablecontrols");
+    setTimeout(() => {
+      this.emit("enablecontrols");
+      sessionStorage.setItem("visited", true);
+    }, 4000);
   }
 
   move() {

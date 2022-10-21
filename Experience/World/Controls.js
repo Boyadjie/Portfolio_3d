@@ -149,10 +149,23 @@ export default class Controls {
               scrub: 0.6,
               invalidateOnRefresh: true,
             },
-          }).to(this.camera.orthographicCamera.position, {
-            x: -6,
-            y: 1,
-          });
+          })
+            .to(
+              this.camera.orthographicCamera.position,
+              {
+                x: -6,
+                y: 1,
+              },
+              "sideLeft"
+            )
+            .to(
+              this.circle.position,
+              {
+                x: -6,
+                z: 5,
+              },
+              "sideLeft"
+            );
         } else if (isMobile) {
           // Reset
           this.room.scale.set(0.3, 0.3, 0.3);

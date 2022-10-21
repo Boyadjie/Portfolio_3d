@@ -12,6 +12,43 @@ html, body {
   color: #dedede;
 }
 
+html#projects, body#projects {
+  color: #242424;
+  background-color: #dedede;
+}
+
+.btn {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: #242424;
+  font-size: 25px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-fill {
+  color: #242424;
+  background-color: #dedede;
+  border: 2px solid transparent;
+  padding: 10px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 120px;
+}
+
+.btn-fill:hover {
+  background-color: #242424;
+  border-color: #dedede;
+  color: #dedede;
+}
+
+.btn-back {
+  font-size: 18px;
+}
+
 /* Experience ----------------------- */
 .experience {
   position: fixed;
@@ -29,7 +66,7 @@ html, body {
 }
 
 .preloader {
-  background-color: #D7CCBC;
+  background-color: #DDDDDD;
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -177,7 +214,7 @@ html, body {
 .page .page-wrapper .section {
   position: relative;
   width: 50%;
-  padding: 1000px 4%;
+  padding: 500px 4%;
   margin: 0;
   background-color: #242424;
   overflow: hidden;
@@ -199,7 +236,7 @@ html, body {
   position: relative;
   padding: 20% 5%;
   border-bottom: 2px solid #dedede;
-  padding-bottom: 400px;
+  padding-bottom: 200px;
   /* Décoration -------------------------- */
 }
 
@@ -214,48 +251,51 @@ html, body {
 .page .page-wrapper .section .section-intro-wrapper h2 {
   position: relative;
   color: #dedede;
+  text-align: center;
 }
 
 .page .page-wrapper .section .section-intro-wrapper h2 .section-title-text {
-  display: block;
-  font-size: 40px;
-  font-weight: 500;
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-transform: skewY(25deg);
-          transform: skewY(25deg);
-  z-index: 5;
+  -webkit-text-stroke: 2px #dedede;
+  position: relative;
   text-transform: uppercase;
+  font-size: 70px;
+  letter-spacing: 1.2vw;
+  font-weight: 700;
+  text-shadow: 0 1px 0 #4a4a4a, -1px -1px 0 #4a4a4a, -1px 0px 0 #333333, -2px 1px 0 #333333, -3px 2px 0 #313131, -4px 3px 0 #2e2e2e, -5px 4px 0 #2c2c2c, -6px 5px 0 #292929, -7px 6px 0 #272727, -8px 7px 0 #242424, -9px 8px 0 #212121, -10px 9px 0 #1f1f1f, -11px 10px 0 #1c1c1c, -12px 11px 0 #1a1a1a, -13px 12px 0 #171717, -14px 13px 0 #151515, -15px 14px 0 #121212, -16px 15px 0 #101010, 0 -1px 1px #dedede, 0 -2px 0px #dedede, -15px 14px 0px #dedede, -16px 15px 0px #dedede, -17px 16px 0px #dedede, -18px 17px 0px #dedede, -2px -1px 0 #dedede, -3px 0px 0 #dedede, -19px 15px 0 #dedede, -18px 14px 0 #dedede, -17px 13px 0 #dedede, -16px 12px 0 #dedede, -15px 11px 0 #dedede, -14px 10px 0 #dedede, -13px 9px 0 #dedede, -12px 8px 0 #dedede, -11px 7px 0 #dedede, -10px 6px 0 #dedede, -9px 5px 0 #dedede, -8px 4px 0 #dedede, -7px 3px 0 #dedede, -6px 2px 0 #dedede, -5px 1px 0 #dedede, -4px 0px 0 #dedede, 0px 2px 0px #dedede, -1px 3px 0px #dedede, -2px 4px 0px #dedede, -3px 5px 0px #dedede, -4px 6px 0px #dedede, -5px 7px 0px #dedede, -6px 8px 0px #dedede, -7px 9px 0px #dedede, -8px 10px 0px #dedede, -9px 11px 0px #dedede, -10px 12px 0px #dedede, -11px 13px 0px #dedede, -12px 14px 0px #dedede, -13px 15px 0px #dedede, -14px 16px 0px #dedede, -15px 17px 0px #dedede;
 }
 
-.page .page-wrapper .section .section-intro-wrapper h2 .decoration:nth-of-type(2),
-.page .page-wrapper .section .section-intro-wrapper h2 .decoration:nth-of-type(3),
-.page .page-wrapper .section .section-intro-wrapper h2 .decoration:nth-of-type(4) {
+.page .page-wrapper .section .section-intro-wrapper h2 .section-title-text.front, .page .page-wrapper .section .section-intro-wrapper h2 .section-title-text.back {
   position: absolute;
-  display: block;
   width: 100%;
-  width: 278px;
-  height: 60px;
-  border: 1px solid #dedede;
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-transform: skewY(-25deg);
-          transform: skewY(-25deg);
+  height: 100%;
+  -webkit-text-stroke: 2px #dedede;
+  text-transform: uppercase;
+  font-size: 70px;
+  letter-spacing: 1.2vw;
+  font-weight: 700;
+  text-shadow: 0 1px 0 #4a4a4a, -1px -1px 0 #4a4a4a, -1px 0px 0 #333333, -2px 1px 0 #333333, -3px 2px 0 #313131, -4px 3px 0 #2e2e2e, -5px 4px 0 #2c2c2c, -6px 5px 0 #292929, -7px 6px 0 #272727, -8px 7px 0 #242424, -9px 8px 0 #212121, -10px 9px 0 #1f1f1f, -11px 10px 0 #1c1c1c, -12px 11px 0 #1a1a1a, -13px 12px 0 #171717, -14px 13px 0 #151515, -15px 14px 0 #121212, -16px 15px 0 #101010, 0 -1px 1px #dedede, 0 -2px 0px #dedede, -15px 14px 0px #dedede, -16px 15px 0px #dedede, -17px 16px 0px #dedede, -18px 17px 0px #dedede, -2px -1px 0 #dedede, -3px 0px 0 #dedede, -19px 15px 0 #dedede, -18px 14px 0 #dedede, -17px 13px 0 #dedede, -16px 12px 0 #dedede, -15px 11px 0 #dedede, -14px 10px 0 #dedede, -13px 9px 0 #dedede, -12px 8px 0 #dedede, -11px 7px 0 #dedede, -10px 6px 0 #dedede, -9px 5px 0 #dedede, -8px 4px 0 #dedede, -7px 3px 0 #dedede, -6px 2px 0 #dedede, -5px 1px 0 #dedede, -4px 0px 0 #dedede, 0px 2px 0px #dedede, -1px 3px 0px #dedede, -2px 4px 0px #dedede, -3px 5px 0px #dedede, -4px 6px 0px #dedede, -5px 7px 0px #dedede, -6px 8px 0px #dedede, -7px 9px 0px #dedede, -8px 10px 0px #dedede, -9px 11px 0px #dedede, -10px 12px 0px #dedede, -11px 13px 0px #dedede, -12px 14px 0px #dedede, -13px 15px 0px #dedede, -14px 16px 0px #dedede, -15px 17px 0px #dedede;
 }
 
-.page .page-wrapper .section .section-intro-wrapper h2 .decoration:nth-of-type(2) {
-  top: 0;
+.page .page-wrapper .section .section-intro-wrapper h2 .section-title-text.front {
+  z-index: 10000;
+  top: -17px;
+  left: 20px;
+  opacity: 1;
+  color: #dedede;
 }
 
-.page .page-wrapper .section .section-intro-wrapper h2 .decoration:nth-of-type(3) {
-  top: 80px;
+.page .page-wrapper .section .section-intro-wrapper h2 .section-title-text.middle {
+  z-index: 100;
+  opacity: .75;
+  color: #242424;
 }
 
-.page .page-wrapper .section .section-intro-wrapper h2 .decoration:nth-of-type(4) {
-  top: 80px;
-  -webkit-transform: skewY(25deg);
-          transform: skewY(25deg);
-  background-color: #dedede;
+.page .page-wrapper .section .section-intro-wrapper h2 .section-title-text.back {
+  z-index: 1;
+  bottom: -17px;
+  left: -20px;
+  opacity: .25;
+  color: #242424;
 }
 
 .page .page-wrapper .section .section-detail-wrapper {
@@ -264,16 +304,53 @@ html, body {
 }
 
 .page .page-wrapper .section .section-detail-wrapper h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.8;
-  margin-top: 64px;
+  margin: 30px auto;
+}
+
+.page .page-wrapper .section .section-detail-wrapper .section-detail-head h4 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.page .page-wrapper .section .section-detail-wrapper .section-detail-head h4 a {
+  color: #dedede;
+}
+
+.page .page-wrapper .section .section-detail-wrapper .section-detail-head h4 strong {
+  color: #D79F04;
 }
 
 .page .page-wrapper .section .section-detail-wrapper p {
   line-height: 2;
   margin-top: 18px;
+  margin-bottom: 60px;
   font-size: 16px;
+  position: relative;
+}
+
+.page .page-wrapper .section .section-detail-wrapper p a {
+  color: #dedede;
+}
+
+.page .page-wrapper .section .section-detail-wrapper p::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 70%;
+  height: 3px;
+  border-radius: 50px;
+  left: 0;
+  bottom: -30px;
+  background-color: #D79F04;
+}
+
+.page .page-wrapper .section .section-detail-wrapper p .hardSkills, .page .page-wrapper .section .section-detail-wrapper p .softSkills {
+  font-size: 12px;
+  line-height: 1;
 }
 
 .page .page-wrapper .section .progress-wrapper {
@@ -295,13 +372,23 @@ html, body {
 }
 
 .page .page-wrapper .section .progress-wrapper .progress-bar {
-  background: #76855A;
+  background: #D79F04;
   height: 100vh;
   width: 100%;
   -webkit-transform-origin: top center;
           transform-origin: top center;
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
+}
+
+#projects {
+  padding: 20px 5%;
+}
+
+#projects h1 {
+  text-align: center;
+  font-size: 64px;
+  text-transform: uppercase;
 }
 
 /* Responsive */

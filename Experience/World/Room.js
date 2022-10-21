@@ -44,19 +44,21 @@ export default class Room {
         child.position.z = 1.89073;
       }
 
-      // if (
-      //   child.name === "Mailbox" ||
-      //   child.name === "ExteriorLamp" ||
-      //   child.name === "Floor1" ||
-      //   child.name === "Floor2" ||
-      //   child.name === "Floor3" ||
-      //   child.name === "FloorStep1" ||
-      //   child.name === "FloorStep2"
-      // ) {
-      //   child.scale.set(0, 0, 0);
-      // }
-
-      child.scale.set(0, 0, 0);
+      if (sessionStorage.getItem("visited")) {
+        if (
+          child.name === "Mailbox" ||
+          child.name === "ExteriorLamp" ||
+          child.name === "Floor1" ||
+          child.name === "Floor2" ||
+          child.name === "Floor3" ||
+          child.name === "FloorStep1" ||
+          child.name === "FloorStep2"
+        ) {
+          child.scale.set(0, 0, 0);
+        }
+      } else {
+        child.scale.set(0, 0, 0);
+      }
 
       if (child.name === "Cube") {
         child.scale.set(0.5, 0.5, 0.5);
