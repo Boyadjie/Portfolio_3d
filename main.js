@@ -1,4 +1,4 @@
-import "./style.css";
+import "/public/style.css";
 import Experience from "./Experience/Experience";
 
 const experience = new Experience(document.querySelector(".exp-canvas"));
