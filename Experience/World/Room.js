@@ -52,18 +52,19 @@ export default class Room {
           child.name === "Floor2" ||
           child.name === "Floor3" ||
           child.name === "FloorStep1" ||
-          child.name === "FloorStep2"
+          child.name === "FloorStep2" ||
+          child.name === "Cube"
         ) {
           child.scale.set(0, 0, 0);
         }
       } else {
         child.scale.set(0, 0, 0);
-      }
 
-      if (child.name === "Cube") {
-        child.scale.set(0.5, 0.5, 0.5);
-        child.position.set(0, 1, 0);
-        child.rotation.y = -Math.PI / 4;
+        if (child.name === "Cube") {
+          child.scale.set(0.5, 0.5, 0.5);
+          child.position.set(0, 1, 0);
+          child.rotation.y = -Math.PI / 4;
+        }
       }
 
       this.roomChildren[child.name.toLowerCase()] = child;
