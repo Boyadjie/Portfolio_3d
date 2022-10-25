@@ -39,12 +39,4 @@ if (window.innerWidth > 990) {
       scale: 1,
     });
   }
-} else {
-  gsap.to($bigBall, {
-    display: "none",
-  });
-
-  gsap.to($smallBall, {
-    display: "none",
-  });
 }

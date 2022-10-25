@@ -21,22 +21,6 @@ html#projects a, body#projects a {
   color: #dedede;
 }
 
-.cursor {
-  pointer-events: none;
-}
-
-.cursor__ball {
-  position: fixed;
-  top: 0;
-  left: 0;
-  mix-blend-mode: difference;
-  z-index: 1000000;
-}
-
-.cursor__ball circle {
-  fill: #dedede;
-}
-
 .btn {
   display: block;
   width: -webkit-max-content;
@@ -120,6 +104,10 @@ html#projects a, body#projects a {
 #mail {
   font-weight: 700;
   position: relative;
+}
+
+.cursor {
+  display: none;
 }
 
 /* Experience ----------------------- */
@@ -637,6 +625,20 @@ html#projects a, body#projects a {
   }
   .socials a i {
     font-size: 50px;
+  }
+  .cursor {
+    display: block;
+    pointer-events: none;
+  }
+  .cursor__ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    mix-blend-mode: difference;
+    z-index: 1000000;
+  }
+  .cursor__ball circle {
+    fill: #dedede;
   }
   #projects {
     padding: 20px 5%;

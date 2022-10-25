@@ -61,6 +61,53 @@ projects.forEach((project) => {
       padding: 0,
     });
   });
+
+  title.addEventListener("touchstart", () => {
+    delay = 1;
+    gsap.to(details, {
+      duration: 1,
+      display: "block",
+      height: percentToPixel(details, 150),
+      padding: window.innerWidth > 990 ? 20 : 0,
+    });
+
+    for (let i = 0; i < toShow.length; i++) {
+      const element = toShow[i];
+
+      gsap.to(element, {
+        duration: 0.5,
+        delay,
+        display: "block",
+        opacity: 1,
+        y: 0,
+      });
+
+      delay += 0.1;
+    }
+  });
+
+  closeBtn.addEventListener("touchstart", () => {
+    delay = 0.3;
+
+    for (let i = toShow.length; i >= 0; i--) {
+      const element = toShow[i];
+
+      gsap.to(element, {
+        duration: 0.5,
+        display: "none",
+        opacity: 0,
+        y: -100,
+      });
+    }
+
+    gsap.to(details, {
+      duration: 1,
+      display: "none",
+      delay,
+      height: 0,
+      padding: 0,
+    });
+  });
 });
 
 // movement animation
