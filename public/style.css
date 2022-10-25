@@ -15,15 +15,10 @@ html, body {
 html#projects, body#projects {
   color: #dedede;
   background-color: #242424;
-  cursor: none;
 }
 
 html#projects a, body#projects a {
   color: #dedede;
-}
-
-html#projects a:hover, body#projects a:hover {
-  cursor: none;
 }
 
 .cursor {
@@ -110,7 +105,7 @@ html#projects a:hover, body#projects a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 40px;
+  gap: 20px;
 }
 
 .socials a {
@@ -119,7 +114,7 @@ html#projects a:hover, body#projects a:hover {
 }
 
 .socials a i {
-  font-size: 50px;
+  font-size: 25px;
 }
 
 #mail {
@@ -348,10 +343,13 @@ html#projects a:hover, body#projects a:hover {
   height: 100%;
   -webkit-text-stroke: 2px #dedede;
   text-transform: uppercase;
-  font-size: 70px;
   letter-spacing: 1.2vw;
   font-weight: 700;
   text-shadow: 0 1px 0 #4a4a4a, -1px -1px 0 #4a4a4a, -1px 0px 0 #333333, -2px 1px 0 #333333, -3px 2px 0 #313131, -4px 3px 0 #2e2e2e, -5px 4px 0 #2c2c2c, -6px 5px 0 #292929, -7px 6px 0 #272727, -8px 7px 0 #242424, -9px 8px 0 #212121, -10px 9px 0 #1f1f1f, -11px 10px 0 #1c1c1c, -12px 11px 0 #1a1a1a, -13px 12px 0 #171717, -14px 13px 0 #151515, -15px 14px 0 #121212, -16px 15px 0 #101010, 0 -1px 1px #dedede, 0 -2px 0px #dedede, -15px 14px 0px #dedede, -16px 15px 0px #dedede, -17px 16px 0px #dedede, -18px 17px 0px #dedede, -2px -1px 0 #dedede, -3px 0px 0 #dedede, -19px 15px 0 #dedede, -18px 14px 0 #dedede, -17px 13px 0 #dedede, -16px 12px 0 #dedede, -15px 11px 0 #dedede, -14px 10px 0 #dedede, -13px 9px 0 #dedede, -12px 8px 0 #dedede, -11px 7px 0 #dedede, -10px 6px 0 #dedede, -9px 5px 0 #dedede, -8px 4px 0 #dedede, -7px 3px 0 #dedede, -6px 2px 0 #dedede, -5px 1px 0 #dedede, -4px 0px 0 #dedede, 0px 2px 0px #dedede, -1px 3px 0px #dedede, -2px 4px 0px #dedede, -3px 5px 0px #dedede, -4px 6px 0px #dedede, -5px 7px 0px #dedede, -6px 8px 0px #dedede, -7px 9px 0px #dedede, -8px 10px 0px #dedede, -9px 11px 0px #dedede, -10px 12px 0px #dedede, -11px 13px 0px #dedede, -12px 14px 0px #dedede, -13px 15px 0px #dedede, -14px 16px 0px #dedede, -15px 17px 0px #dedede;
+}
+
+.page .page-wrapper .section .section-intro-wrapper h2 .section-title-text.front, .page .page-wrapper .section .section-intro-wrapper h2 .section-title-text.middle, .page .page-wrapper .section .section-intro-wrapper h2 .section-title-text.back {
+  font-size: 70px;
 }
 
 .page .page-wrapper .section .section-intro-wrapper h2 .section-title-text.front {
@@ -467,7 +465,7 @@ html#projects a:hover, body#projects a:hover {
 }
 
 #projects {
-  padding: 20px 5%;
+  padding: 20px 10px;
 }
 
 #projects header .top {
@@ -484,25 +482,18 @@ html#projects a:hover, body#projects a:hover {
 
 #projects header h1 {
   text-align: center;
-  font-size: 64px;
+  font-size: 50px;
   text-transform: uppercase;
   margin-top: 50px;
 }
 
 #projects .projects-list section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 20px;
   padding: 100px 0;
   margin: 200px 0;
 }
 
 #projects .projects-list section:first-child {
-  margin-top: 100px;
+  margin-top: 0;
 }
 
 #projects .projects-list section:last-child > div.content .project-details {
@@ -511,7 +502,7 @@ html#projects a:hover, body#projects a:hover {
 }
 
 #projects .projects-list section > div {
-  width: 50%;
+  width: 100%;
 }
 
 #projects .projects-list section > div:first-child {
@@ -534,36 +525,7 @@ html#projects a:hover, body#projects a:hover {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-}
-
-#projects .projects-list section > div.content > div:not(.project-details)#first {
-  -webkit-transform: translateX(-300px);
-          transform: translateX(-300px);
-}
-
-#projects .projects-list section > div.content > div:not(.project-details)#second {
-  -webkit-transform: translateX(100px);
-          transform: translateX(100px);
-}
-
-#projects .projects-list section > div.content > div:not(.project-details)#third {
-  -webkit-transform: translateX(-100px);
-          transform: translateX(-100px);
-}
-
-#projects .projects-list section > div.content > div:not(.project-details)#fourth {
-  -webkit-transform: translateX(100px);
-          transform: translateX(100px);
-}
-
-#projects .projects-list section > div.content > div:not(.project-details)#fifth {
-  -webkit-transform: translateX(-100px);
-          transform: translateX(-100px);
-}
-
-#projects .projects-list section > div.content > div:not(.project-details)#sixth {
-  -webkit-transform: translateX(100px);
-          transform: translateX(100px);
+  margin-top: 50px;
 }
 
 #projects .projects-list section > div.content > div:not(.project-details) .number {
@@ -572,13 +534,13 @@ html#projects a:hover, body#projects a:hover {
 }
 
 #projects .projects-list section > div.content > div:not(.project-details) h2 {
-  font-size: 75px;
+  font-size: 55px;
   line-height: .9;
   text-transform: uppercase;
 }
 
 #projects .projects-list section > div.content > div:not(.project-details) h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   margin-top: 10px;
 }
@@ -587,7 +549,7 @@ html#projects a:hover, body#projects a:hover {
   position: absolute;
   width: 100%;
   height: 0;
-  top: -55%;
+  top: 0;
   padding: 0;
   background-color: #242424;
   border-radius: 15px;
@@ -641,10 +603,11 @@ html#projects a:hover, body#projects a:hover {
 
 #projects .projects-list section > div.content .project-details > div .closeDetails {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 50px;
+  right: 0;
   width: 30px;
   height: 30px;
+  z-index: 9999;
 }
 
 #projects .projects-list section > div.content .project-details > div .closeDetails::after {
@@ -668,18 +631,93 @@ html#projects a:hover, body#projects a:hover {
   text-align: left;
 }
 
-#projects .projects-list section:nth-child(even) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+@media screen and (min-width: 990px) {
+  .socials {
+    gap: 50px;
+  }
+  .socials a i {
+    font-size: 50px;
+  }
+  #projects {
+    padding: 20px 5%;
+    cursor: none;
+  }
+  #projects a:hover {
+    cursor: none;
+  }
+  #projects header h1 {
+    font-size: 64px;
+  }
+  #projects .projects-list section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+  #projects .projects-list section:first-child {
+    margin-top: 100px;
+  }
+  #projects .projects-list section > div {
+    width: 50%;
+  }
+  #projects .projects-list section > div.content > div:not(.project-details) {
+    margin-top: 0;
+  }
+  #projects .projects-list section > div.content > div:not(.project-details)#first {
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  #projects .projects-list section > div.content > div:not(.project-details)#second {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  #projects .projects-list section > div.content > div:not(.project-details)#third {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  #projects .projects-list section > div.content > div:not(.project-details)#fourth {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  #projects .projects-list section > div.content > div:not(.project-details)#fifth {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  #projects .projects-list section > div.content > div:not(.project-details)#sixth {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  #projects .projects-list section > div.content > div:not(.project-details) h2 {
+    font-size: 75px;
+    line-height: .9;
+    text-transform: uppercase;
+  }
+  #projects .projects-list section > div.content > div:not(.project-details) h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  #projects .projects-list section > div.content .project-details {
+    top: -55%;
+  }
+  #projects .projects-list section > div.content .project-details > div .closeDetails {
+    top: 20px;
+    right: 20px;
+  }
+  #projects .projects-list section:nth-child(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  #projects .projects-list section:nth-child(even) > div.content div:not(.project-details) {
+    margin-left: auto;
+  }
 }
 
-#projects .projects-list section:nth-child(even) > div.content div:not(.project-details) {
-  margin-left: auto;
-}
-
-/* Responsive */
 @media screen and (max-width: 968px) {
   .page .page-wrapper .section {
     width: 100%;
@@ -687,6 +725,28 @@ html#projects a:hover, body#projects a:hover {
   .page .page-wrapper .section .progress-wrapper-left {
     right: 0;
     left: auto;
+  }
+  .page .page-wrapper .section .section-intro-wrapper {
+    position: relative;
+    padding: 20% 5%;
+    border-bottom: 2px solid #dedede;
+    padding-bottom: 200px;
+    /* Décoration -------------------------- */
+  }
+  .page .page-wrapper .section .section-intro-wrapper .section-number {
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    color: #dedede;
+    font-size: 24px;
+  }
+  .page .page-wrapper .section .section-intro-wrapper h2 {
+    position: relative;
+    color: #dedede;
+    text-align: center;
+  }
+  .page .page-wrapper .section .section-intro-wrapper h2 .section-title-text.front, .page .page-wrapper .section .section-intro-wrapper h2 .section-title-text.middle, .page .page-wrapper .section .section-intro-wrapper h2 .section-title-text.back {
+    font-size: 45px;
   }
   .page .page-wrapper .hero-wrapper {
     width: calc(100% - 60px);

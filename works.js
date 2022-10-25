@@ -4,6 +4,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = document.querySelectorAll("section");
 
+function percentToPixel(_elem, _perc) {
+  return (_elem.parentElement.clientWidth / 100) * parseFloat(_perc);
+}
 //  Show-Hide details
 projects.forEach((project) => {
   const title = project.querySelector("h2");
@@ -17,8 +20,8 @@ projects.forEach((project) => {
     gsap.to(details, {
       duration: 1,
       display: "block",
-      height: 443,
-      padding: 20,
+      height: percentToPixel(details, 150),
+      padding: window.innerWidth > 990 ? 20 : 0,
     });
 
     for (let i = 0; i < toShow.length; i++) {
@@ -60,58 +63,61 @@ projects.forEach((project) => {
   });
 });
 
-gsap.to("#first", {
-  x: 80,
-  scrollTrigger: {
-    trigger: "section:nth-child(1)",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: 0.5,
-  },
-});
+// movement animation
+if (window.innerWidth > 990) {
+  gsap.to("#first", {
+    x: 80,
+    scrollTrigger: {
+      trigger: "section:nth-child(1)",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: 0.5,
+    },
+  });
 
-gsap.to("#second", {
-  x: -80,
-  scrollTrigger: {
-    trigger: "section:nth-child(2)",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: 0.5,
-  },
-});
-gsap.to("#third", {
-  x: 80,
-  scrollTrigger: {
-    trigger: "section:nth-child(3)",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: 0.5,
-  },
-});
-gsap.to("#fourth", {
-  x: -80,
-  scrollTrigger: {
-    trigger: "section:nth-child(4)",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: 0.5,
-  },
-});
-gsap.to("#fifth", {
-  x: 80,
-  scrollTrigger: {
-    trigger: "section:nth-child(5)",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: 0.5,
-  },
-});
-gsap.to("#sixth", {
-  x: -80,
-  scrollTrigger: {
-    trigger: "section:nth-child(6)",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: 0.5,
-  },
-});
+  gsap.to("#second", {
+    x: -80,
+    scrollTrigger: {
+      trigger: "section:nth-child(2)",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: 0.5,
+    },
+  });
+  gsap.to("#third", {
+    x: 80,
+    scrollTrigger: {
+      trigger: "section:nth-child(3)",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: 0.5,
+    },
+  });
+  gsap.to("#fourth", {
+    x: -80,
+    scrollTrigger: {
+      trigger: "section:nth-child(4)",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: 0.5,
+    },
+  });
+  gsap.to("#fifth", {
+    x: 80,
+    scrollTrigger: {
+      trigger: "section:nth-child(5)",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: 0.5,
+    },
+  });
+  gsap.to("#sixth", {
+    x: -80,
+    scrollTrigger: {
+      trigger: "section:nth-child(6)",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: 0.5,
+    },
+  });
+}
