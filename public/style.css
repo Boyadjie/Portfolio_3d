@@ -72,13 +72,15 @@ html#projects a:hover, body#projects a:hover {
 
 .btn-outlined {
   font-size: 18px;
-  border: 2.5px solid #242424;
+  border: 2.5px solid #dedede;
   padding: 10px 30px;
   border-radius: 5px;
   text-decoration: none;
   margin: 0 auto;
   margin-top: 20px;
   font-weight: 600;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .btn-back {
@@ -99,6 +101,30 @@ html#projects a:hover, body#projects a:hover {
   left: 0;
   -webkit-transform: translateY(-50%) rotateZ(-45deg);
           transform: translateY(-50%) rotateZ(-45deg);
+}
+
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #dedede;
+}
+
+.socials a i {
+  font-size: 50px;
+}
+
+#mail {
+  font-weight: 700;
+  position: relative;
 }
 
 /* Experience ----------------------- */
@@ -356,7 +382,7 @@ html#projects a:hover, body#projects a:hover {
 }
 
 .page .page-wrapper .section .section-detail-wrapper h3 {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
   line-height: 1.8;
   margin: 30px auto;
@@ -376,6 +402,13 @@ html#projects a:hover, body#projects a:hover {
   color: #D79F04;
 }
 
+.page .page-wrapper .section .section-detail-wrapper #me {
+  display: block;
+  width: 60%;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+
 .page .page-wrapper .section .section-detail-wrapper p {
   line-height: 2;
   margin-top: 18px;
@@ -386,13 +419,6 @@ html#projects a:hover, body#projects a:hover {
 
 .page .page-wrapper .section .section-detail-wrapper p a {
   color: #dedede;
-}
-
-.page .page-wrapper .section .section-detail-wrapper p #me {
-  display: block;
-  width: 60%;
-  padding: 20px;
-  margin: 0 auto;
 }
 
 .page .page-wrapper .section .section-detail-wrapper p::after {
@@ -444,10 +470,23 @@ html#projects a:hover, body#projects a:hover {
   padding: 20px 5%;
 }
 
-#projects h1 {
+#projects header .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#projects header h1 {
   text-align: center;
   font-size: 64px;
   text-transform: uppercase;
+  margin-top: 50px;
 }
 
 #projects .projects-list section {
@@ -460,6 +499,15 @@ html#projects a:hover, body#projects a:hover {
   gap: 20px;
   padding: 100px 0;
   margin: 200px 0;
+}
+
+#projects .projects-list section:first-child {
+  margin-top: 100px;
+}
+
+#projects .projects-list section:last-child > div.content .project-details {
+  height: 150%;
+  top: -40px;
 }
 
 #projects .projects-list section > div {
@@ -482,24 +530,54 @@ html#projects a:hover, body#projects a:hover {
   position: relative;
 }
 
-#projects .projects-list section > div.content div:not(.project-details) {
+#projects .projects-list section > div.content > div:not(.project-details) {
   width: 100%;
   margin: 0 auto;
   text-align: center;
 }
 
-#projects .projects-list section > div.content div:not(.project-details) .number {
+#projects .projects-list section > div.content > div:not(.project-details)#first {
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
+}
+
+#projects .projects-list section > div.content > div:not(.project-details)#second {
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+}
+
+#projects .projects-list section > div.content > div:not(.project-details)#third {
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+}
+
+#projects .projects-list section > div.content > div:not(.project-details)#fourth {
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+}
+
+#projects .projects-list section > div.content > div:not(.project-details)#fifth {
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+}
+
+#projects .projects-list section > div.content > div:not(.project-details)#sixth {
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+}
+
+#projects .projects-list section > div.content > div:not(.project-details) .number {
   font-size: 32px;
   margin-bottom: 70px;
 }
 
-#projects .projects-list section > div.content div:not(.project-details) h2 {
+#projects .projects-list section > div.content > div:not(.project-details) h2 {
   font-size: 75px;
   line-height: .9;
   text-transform: uppercase;
 }
 
-#projects .projects-list section > div.content div:not(.project-details) h3 {
+#projects .projects-list section > div.content > div:not(.project-details) h3 {
   font-size: 20px;
   font-weight: 500;
   margin-top: 10px;
@@ -508,10 +586,10 @@ html#projects a:hover, body#projects a:hover {
 #projects .projects-list section > div.content .project-details {
   position: absolute;
   width: 100%;
-  height: 210%;
+  height: 0;
   top: -55%;
-  padding: 20px;
-  background-color: white;
+  padding: 0;
+  background-color: #242424;
   border-radius: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -522,10 +600,23 @@ html#projects a:hover, body#projects a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
+  overflow: hidden;
+}
+
+#projects .projects-list section > div.content .project-details .toShow {
+  display: none;
+  opacity: 0;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
+#projects .projects-list section > div.content .project-details > div {
+  position: relative;
 }
 
 #projects .projects-list section > div.content .project-details > div p, #projects .projects-list section > div.content .project-details > div a {
-  color: #242424;
+  color: #dedede;
 }
 
 #projects .projects-list section > div.content .project-details > div .title {
@@ -533,6 +624,37 @@ html#projects a:hover, body#projects a:hover {
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
+}
+
+#projects .projects-list section > div.content .project-details > div .closeDetails::before, #projects .projects-list section > div.content .project-details > div .closeDetails::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 3px;
+  border-radius: 10px;
+  background: #dedede;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#projects .projects-list section > div.content .project-details > div .closeDetails {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+}
+
+#projects .projects-list section > div.content .project-details > div .closeDetails::after {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+#projects .projects-list section > div.content .project-details > div .closeDetails::before {
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
 }
 
 #projects .projects-list section > div.content .project-details > div .description .techno {

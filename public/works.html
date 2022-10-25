@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
-    <title>Works</title>
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <title>Emeric Boyadjian | Works</title>
   </head>
   <body id="projects">
     <main>
@@ -22,7 +27,27 @@
         </div>
       </div>
       <header>
-        <a class="btn btn-back hoverable" href="../index.html">Back to Home</a>
+        <div class="top">
+          <div>
+            <a class="btn btn-back hoverable" href="/">Back to Home</a>
+          </div>
+          <div class="socials">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hoverable"
+              href="https://github.com/Boyadjie"
+              ><i class="devicon-github-original"></i
+            ></a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hoverable"
+              href="https://www.linkedin.com/in/emeric-boyadjian-924ba3198/"
+              ><i class="devicon-linkedin-plain"></i
+            ></a>
+          </div>
+        </div>
 
         <h1>Projects</h1>
       </header>
@@ -37,7 +62,7 @@
             />
           </div>
           <div class="content">
-            <div>
+            <div id="first">
               <p class="number">01</p>
               <div>
                 <h2 class="hoverable">Findizzy</h2>
@@ -46,21 +71,22 @@
             </div>
             <div class="project-details">
               <div>
-                <p class="title">Findizzy</p>
+                <p class="title toShow">Findizzy</p>
+                <span class="closeDetails hoverable toShow"></span>
                 <div class="description">
-                  <p class="techno">[React.js, Strapi, SQLite, Scss]</p>
-                  <p>
+                  <p class="techno toShow">[React.js, Strapi, SQLite, Scss]</p>
+                  <p class="toShow">
                     A very interesting cross-disciplinary project. The challenge
                     was to create a website (commercial or not) including a
                     mechanism that benefits ethics, charity and/or sustainable
                     development.
                   </p>
-                  <p>
+                  <p class="toShow">
                     We have chosen to position ourselves around the loss of
                     animals.
                   </p>
 
-                  <p>
+                  <p class="toShow">
                     Although the project could not be fully developed, we still
                     developed the backend and the main features.<br />My goal on
                     this project was also to use React.js with a backend on a
@@ -71,7 +97,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://github.com/Boyadjie/Findizzy"
-                  class="btn btn-outlined hoverable"
+                  class="btn btn-outlined hoverable toShow"
                   >Visit Github</a
                 >
               </div>
@@ -83,7 +109,7 @@
             <img src="/img/projects/vinj.png" alt="Vin'j" />
           </div>
           <div class="content">
-            <div>
+            <div id="second">
               <p class="number">02</p>
               <div>
                 <h2 class="hoverable">Vin'j</h2>
@@ -92,16 +118,17 @@
             </div>
             <div class="project-details">
               <div>
-                <p class="title">Hackaton: Vin'j</p>
+                <p class="title toShow">Hackaton: Vin'j</p>
+                <span class="closeDetails hoverable toShow"></span>
                 <div class="description">
-                  <p class="techno">[React.js, Data analysis]</p>
-                  <p>
+                  <p class="techno toShow">[React.js, Data analysis]</p>
+                  <p class="toShow">
                     A Hackaton around data and the environment: "How to
                     popularize to the general public the essential data to
                     better understand the ecological situation of our planet?" ♻
                     🌳
                   </p>
-                  <p>
+                  <p class="toShow">
                     For this week, my team and I focused our work around jeans.
                     To highlight the second hand and to raise awareness about
                     the pollution of textile products.
@@ -111,7 +138,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://vin-j.netlify.app/"
-                  class="btn btn-outlined hoverable"
+                  class="btn btn-outlined hoverable toShow"
                   >Visit Website</a
                 >
               </div>
@@ -123,7 +150,7 @@
             <img src="/img/projects/server.png" alt="Web Server" />
           </div>
           <div class="content">
-            <div>
+            <div id="third">
               <p class="number">03</p>
               <div>
                 <h2 class="hoverable">Web server</h2>
@@ -132,14 +159,15 @@
             </div>
             <div class="project-details">
               <div>
-                <p class="title">Web server</p>
+                <p class="title toShow">Web server</p>
+                <span class="closeDetails hoverable toShow"></span>
                 <div class="description">
-                  <p class="techno">[npm, fastify, node.js]</p>
-                  <p>
+                  <p class="techno toShow">[npm, fastify, node.js]</p>
+                  <p class="toShow">
                     It's my first server created in node.js. The goal was to
                     discover the good ways to create a server and an api.
                   </p>
-                  <p>
+                  <p class="toShow">
                     We had to implement different routes with the good words
                     (Get, Put, Push and Delete) and add an authorisation system.
                   </p>
@@ -148,7 +176,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://github.com/Boyadjie/webserver"
-                  class="btn btn-outlined hoverable"
+                  class="btn btn-outlined hoverable toShow"
                   >Visit Github</a
                 >
               </div>
@@ -160,7 +188,7 @@
             <img src="/img/projects/ice-palace.png" alt="Ice Palace" />
           </div>
           <div class="content">
-            <div>
+            <div id="fourth">
               <p class="number">04</p>
               <div>
                 <h2 class="hoverable">Ice Palace</h2>
@@ -169,22 +197,23 @@
             </div>
             <div class="project-details">
               <div>
-                <p class="title">Ice Palace</p>
+                <p class="title toShow">Ice Palace</p>
+                <span class="closeDetails hoverable toShow"></span>
                 <div class="description">
-                  <p class="techno">
+                  <p class="techno toShow">
                     [React.js, Scss, Trello, Web project leader]
                   </p>
-                  <p>
+                  <p class="toShow">
                     This website was created as part of a project management
                     course. Taking on the role of project manager, we created
                     this fictitious ice cream website.
                   </p>
-                  <p>
+                  <p class="toShow">
                     I was the leader of a small multi-disciplinary team composed
                     of students in web development, web design and web
                     marketing.
                   </p>
-                  <p>
+                  <p class="toShow">
                     It was my first website developed with React.js and i was
                     looking for my team to discover it.
                   </p>
@@ -193,7 +222,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://github.com/Boyadjie/ice_palace"
-                  class="btn btn-outlined hoverable"
+                  class="btn btn-outlined hoverable toShow"
                   >Visit Github</a
                 >
               </div>
@@ -205,7 +234,7 @@
             <img src="/img/projects/kanzai.png" alt="Kanzaï" />
           </div>
           <div class="content">
-            <div>
+            <div id="fifth">
               <p class="number">05</p>
               <div>
                 <h2 class="hoverable">Kanzaï</h2>
@@ -214,16 +243,17 @@
             </div>
             <div class="project-details">
               <div>
-                <p class="title">Kanzaï</p>
+                <p class="title toShow">Kanzaï</p>
+                <span class="closeDetails hoverable toShow"></span>
                 <div class="description">
-                  <p class="techno">[HTML5, CSS3, Javascript, PHP]</p>
-                  <p>
+                  <p class="techno toShow">[HTML5, CSS3, Javascript, PHP]</p>
+                  <p class="toShow">
                     This is a project where I took the role of project manager.
                     The objective was to create a website for our second year
                     student agency in DUT MMI (multimedia and internet
                     professions).
                   </p>
-                  <p>
+                  <p class="toShow">
                     The constraints were to gather all the projects of the
                     agency in a website and of course to introduce the agency,
                     its poles and its members.
@@ -233,7 +263,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://kanzai.netlify.app/"
-                  class="btn btn-outlined hoverable"
+                  class="btn btn-outlined hoverable toShow"
                   >Vist Website</a
                 >
               </div>
@@ -245,7 +275,7 @@
             <img src="/img/projects/mrm.png" alt="Mon Risk Manager" />
           </div>
           <div class="content">
-            <div>
+            <div id="sixth">
               <p class="number">06</p>
               <div>
                 <h2 class="hoverable">My Risk Manager</h2>
@@ -254,15 +284,18 @@
             </div>
             <div class="project-details">
               <div>
-                <p class="title">My Risk Manager</p>
+                <p class="title toShow">My Risk Manager</p>
+                <span class="closeDetails hoverable toShow"></span>
                 <div class="description">
-                  <p class="techno">[Wordpress, PHP, Advance Custom Field]</p>
-                  <p>
+                  <p class="techno toShow">
+                    [Wordpress, PHP, Advance Custom Field]
+                  </p>
+                  <p class="toShow">
                     A project where we had to create a website for a real client
                     by creating the design and content, then integrating them.
                     It was my first realization for a real client.
                   </p>
-                  <p>
+                  <p class="toShow">
                     In my team there were 3 graphic designer and a developer. We
                     had one week for the design and one week for the
                     integration, the website had to be manageable by the client
@@ -273,7 +306,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://mmi.univ-savoie.fr/~maiadacg/wordpress/"
-                  class="btn btn-outlined hoverable"
+                  class="btn btn-outlined hoverable toShow"
                   >Visit Website</a
                 >
               </div>
@@ -283,7 +316,7 @@
       </div>
     </main>
 
+    <script type="module" src="../works.js"></script>
     <script type="module" src="../mouse.js"></script>
-    <script type="module" src="../zoom.js"></script>
   </body>
 </html>
