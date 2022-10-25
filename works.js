@@ -62,7 +62,7 @@ projects.forEach((project) => {
     });
   });
 
-  title.addEventListener("touchstart", () => {
+  title.addEventListener("touchend", () => {
     delay = 1;
     gsap.to(details, {
       duration: 1,
@@ -86,7 +86,7 @@ projects.forEach((project) => {
     }
   });
 
-  closeBtn.addEventListener("touchstart", () => {
+  closeBtn.addEventListener("touchend", () => {
     delay = 0.3;
 
     for (let i = toShow.length; i >= 0; i--) {
